@@ -1,26 +1,12 @@
 'use strict';
-var ghGot = require('gh-got');
+const ghGot = require('gh-got');
 
-module.exports = function (repo, opts, cb) {
+module.exports = (repo, opts) => {
 	opts = opts || {};
 
 	if (typeof repo !== 'string') {
-		throw new Error('Repository is required');
+		return Promise.reject(new Error('Repository is required'));
 	}
 
-	if (typeof opts === 'function') {
-		cb = opts;
-		opts = {};
-	}
-
-	var url = 'repos/' + repo + '/branches';
-
-	ghGot(url, opts, function (err, data) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb(null, data);
-	});
+	return ghGot(`repos/${repo}/branches`, opts).then(res => res.body);
 };

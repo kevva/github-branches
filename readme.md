@@ -13,9 +13,9 @@ $ npm install --save github-branches
 ## Usage
 
 ```js
-var githubBranches = require('github-branches');
+const githubBranches = require('github-branches');
 
-githubBranches('kevva/github-branches', function (err, branches) {
+githubBranches('kevva/github-branches').then(branches => {
 	console.log(branches);
 	/*
 	[{
