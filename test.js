@@ -1,12 +1,8 @@
-'use strict';
-var test = require('ava');
-var githubBranches = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	t.plan(2);
-
-	githubBranches('kevva/github-branches').then(function (branches) {
-		t.assert(branches.length === 1, branches.length);
-		t.assert(branches[0].name === 'master', branches[0]);
-	});
+test(async t => {
+	const data = await fn('kevva/github-branches');
+	t.truthy(data.length);
+	t.is(data[0].name, 'master');
 });
