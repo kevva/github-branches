@@ -1,8 +1,8 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
 test(async t => {
-	const data = await fn('kevva/github-branches');
+	const data = await m('kevva/github-branches');
 	t.truthy(data.length);
 	t.is(data[0].name, 'master');
 });

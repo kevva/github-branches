@@ -9,10 +9,10 @@
     "email": "kevinmartensson@gmail.com",
     "url": "https://github.com/kevva"
   },
+  "bin": "cli.js",
   "engines": {
     "node": ">=4"
   },
-  "bin": "cli.js",
   "scripts": {
     "test": "xo && ava"
   },
@@ -31,7 +31,7 @@
     "repositories"
   ],
   "dependencies": {
-    "gh-got": "^4.0.0",
+    "gh-got": "^5.0.0",
     "meow": "^3.3.0"
   },
   "devDependencies": {
