@@ -9,7 +9,6 @@
     "email": "kevinmartensson@gmail.com",
     "url": "https://github.com/kevva"
   },
-  "bin": "cli.js",
   "engines": {
     "node": ">=4"
   },
@@ -17,22 +16,18 @@
     "test": "xo && ava"
   },
   "files": [
-    "cli.js",
     "index.js"
   ],
   "keywords": [
     "api",
     "branch",
     "branches",
-    "cli",
-    "cli-app",
     "github",
     "repo",
     "repositories"
   ],
   "dependencies": {
-    "gh-got": "^5.0.0",
-    "meow": "^3.3.0"
+    "gh-got": "^5.0.0"
   },
   "devDependencies": {
     "ava": "*",

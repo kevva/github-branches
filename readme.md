@@ -30,22 +30,9 @@ githubBranches('kevva/github-branches').then(branches => {
 ```
 
 
-## CLI
+## Related
 
-```
-$ npm install --global github-branches
-```
-
-```
-$ github-branches --help
-
-  Example
-    $ github-branches kevva/github-branches
-    $ github-branches kevva/github-branches --token 523ef69119eadg12
-
-  Options
-    -t, --token    GitHub authentication token
-```
+* [github-branches-cli](https://github.com/kevva/github-branches-cli) - CLI for this module
 
 
 ## License
